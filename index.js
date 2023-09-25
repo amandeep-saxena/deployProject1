@@ -7,8 +7,8 @@ var bodyParser = require('body-parser')
 
 const mongoose = require("mongoose");
 
-let port = 3000;
-port = process.env.PORT
+
+let port = process.env.PORT || 3000
 
 app.use(bodyParser.urlencoded({ extended: false }))
 
