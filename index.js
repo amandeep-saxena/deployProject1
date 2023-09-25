@@ -7,8 +7,8 @@ var bodyParser = require('body-parser')
 
 const mongoose = require("mongoose");
 
-   const  PATH = 3000
-const PATHs = process.env.PATH 
+let port = 3000;
+port = process.env.PORT
 
 app.use(bodyParser.urlencoded({ extended: false }))
 
@@ -52,4 +52,4 @@ app.post('/app1' ,async(req,res) =>{
 
 
 
-app.listen(PATHs);
+app.listen(port);
