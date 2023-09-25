@@ -1,13 +1,14 @@
 const express = require("express")
 const app = express();
 
-const Empdata = require('../src/model/Emp');
+const Empdata = require('./model/Emp');
 
 var bodyParser = require('body-parser')
 
 const mongoose = require("mongoose");
 
-
+   const  PATH = 3000
+const PATHs = process.env.PATH 
 
 app.use(bodyParser.urlencoded({ extended: false }))
 
@@ -51,4 +52,4 @@ app.post('/app1' ,async(req,res) =>{
 
 
 
-app.listen(4000);
+app.listen(PATHs);
